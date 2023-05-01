@@ -14,11 +14,16 @@ const getgeocodingFromAPI = async (city) => {
 }
 
 const getDataFromAPI = async (city) => {
-  const cords = await getgeocodingFromAPI(city)
-  const { lat, lon } = cords
-  const dataUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&appid=${key}`
-  const data = await (await fetch(dataUrl)).json()
-  return data
+  try {
+    const cords = await getgeocodingFromAPI(city)
+    const { lat, lon } = cords
+    const dataUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&appid=${key}`
+    const data = await (await fetch(dataUrl)).json()
+    return data
+  } catch (error) {
+    console.error(error)
+    throw new Error('Failed to fetch weather data')
+  }
 }
 
 function Content(props) {
@@ -36,18 +41,20 @@ function Content(props) {
   const [backgroundImage, setBackgroundImage] = useState(nightBgc)
 
   useEffect(() => {
-    getDataFromAPI(props.location).then(res => setData(res)).catch(err => console.log(err))
+    getDataFromAPI(props.location).then(res => {
+      setData(res)
+    }).catch(err => console.log(err))
+  }, [props.location])
+
+  useEffect(() => {
     let timestamp = data.current.dt
     let date = new Date(timestamp * 1000)
     if (date.getHours() >= 12) {
       setBackgroundImage(nightBgc)
-    }
-    else {
+    } else {
       setBackgroundImage(dayBgc)
     }
-
-
-  }, [props.location])
+  }, [data])
 
   return (
     <div className='content' style={{ backgroundImage: `url(${backgroundImage})` }} >
