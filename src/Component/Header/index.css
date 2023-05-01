@@ -13,17 +13,20 @@
   position: relative;
   display: inline-block;
   margin-right: 2.6vmin;
+  border-radius: 2.5vmin;
+  outline: 1px solid #141932;
 }
 
 .location-input {
+  text-indent: 1em;
   border: none;
-  border-radius: 1.3vmin;
+  border-radius: 2.5vmin;
   box-shadow: 0 0.5vmin 1vmin rgba(0, 0, 0, 0.1);
   font-size: 4.2vmin;
   padding-right: 10vmin;
   width: 50vmin;
   height: 8vmin;
-  opacity: 0.6;
+  opacity: 0.2;
 }
 
 .location-input:focus {
@@ -35,9 +38,12 @@
   position: absolute !important;
   top: 0;
   right: 0;
+  border-radius: 2.5vmin !important;
   width: 10vmin;
-  height: 8.3vmin;
+  height: 8.2vmin;
   padding: 0 !important;
+  background-color: transparent !important;
+  opacity: 0.6;
 }
 
 .css-1d6wzja-MuiButton-startIcon>*:nth-of-type(1) {
