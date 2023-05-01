@@ -1,0 +1,49 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(calc(-80vmin / 2));
+  padding: 5vmin;
+  width: 70vmin;
+  height: 15vmin;
+  text-align: center;
+}
+
+.search-box {
+  position: relative;
+  display: inline-block;
+  margin-right: 2.6vmin;
+}
+
+.location-input {
+  border: none;
+  border-radius: 1.3vmin;
+  box-shadow: 0 0.5vmin 1vmin rgba(0, 0, 0, 0.1);
+  font-size: 4.2vmin;
+  padding-right: 10vmin;
+  width: 50vmin;
+  height: 8vmin;
+  opacity: 0.6;
+}
+
+.location-input:focus {
+  outline: none;
+  box-shadow: 0 1vmin 1vmin rgba(0, 0, 0, 0.2);
+}
+
+.search-btn {
+  position: absolute !important;
+  top: 0;
+  right: 0;
+  width: 10vmin;
+  height: 8.3vmin;
+  padding: 0 !important;
+}
+
+.css-1d6wzja-MuiButton-startIcon>*:nth-of-type(1) {
+  font-size: 6vmin;
+}
+
+.css-1d6wzja-MuiButton-startIcon {
+  margin-left: 2.13vmin !important;
+}
