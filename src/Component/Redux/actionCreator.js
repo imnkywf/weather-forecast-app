@@ -1,0 +1,1 @@
+export const sendLocation = (data) => ({ type: 'sendLocation', data })
