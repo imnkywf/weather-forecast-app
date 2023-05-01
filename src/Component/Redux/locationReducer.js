@@ -1,8 +1,9 @@
+import { sendLocation } from "./actionCreator"
 const initialState = 'Shanghai'
 export default function locationReducer(prevState = initialState, action) {
   const { type, data } = action
   switch (type) {
-    case 'sendLocation':
+    case sendLocation:
       return data
     default:
       return prevState
