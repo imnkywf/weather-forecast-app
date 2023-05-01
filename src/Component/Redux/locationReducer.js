@@ -1,4 +1,4 @@
-const initialState = 'shanghai'
+const initialState = 'Shanghai'
 export default function locationReducer(prevState = initialState, action) {
   const { type, data } = action
   switch (type) {

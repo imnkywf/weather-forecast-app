@@ -5,7 +5,7 @@ import './index.css'
 import nightBgc from '../../Images/Night-bgc.jpg'
 import dayBgc from '../../Images/Day-bgc.jpg'
 
-// const key = 'f8af435890e6e5a851981bc80ccb4394'
+// const key = ''
 
 const getgeocodingFromAPI = async (city) => {
   const geocodingUrl = `https://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=1&appid=${key}`
@@ -22,14 +22,30 @@ const getDataFromAPI = async (city) => {
 }
 
 function Content(props) {
-  const [data, setData] = useState({})
+  const [data, setData] = useState({
+    timezone: 2000,
+    current: {
+      temp: 300,
+      weather: [{ main: 'cloudy' }],
+      humidity: 50,
+      wind_speed: 5,
+      dt: 1682938346
+    }
+
+  })
   const [backgroundImage, setBackgroundImage] = useState(nightBgc)
 
   useEffect(() => {
     getDataFromAPI(props.location).then(res => setData(res)).catch(err => console.log(err))
+    let timestamp = data.current.dt
+    let date = new Date(timestamp * 1000)
+    if (date.getHours() >= 12) {
+      setBackgroundImage(nightBgc)
+    }
+    else {
+      setBackgroundImage(dayBgc)
+    }
 
-
-    setBackgroundImage(nightBgc)
 
   }, [props.location])
 
@@ -38,30 +54,30 @@ function Content(props) {
       <div className="container">
         <div className="top">
           <div className="location">
-            <p>{data.city}</p>
+            <p>{props.location}</p> <p>Timezone: {data.timezone}</p>
             <div className="temp">
-              <h1>{data.main.temp}°C</h1>
+              <h1>{Math.floor(data.current.temp - 273.15)}°C</h1>
             </div>
 
             <div className="description">
-              <p>{data.weather}</p>
+              <p>{data.current.weather[0].main}</p>
             </div>
           </div>
         </div>
 
         <div className="bottom">
           <div className="feels">
-            <p>65°C</p>
+            <p>{data.current.weather[0].main}</p>
             <p>Feels</p>
           </div>
 
           <div className="humidity">
-            <p>20%</p>
+            <p>{data.current.humidity}%</p>
             <p>Humidity</p>
           </div>
 
           <div className="wind">
-            <p>1 MPH</p>
+            <p>{data.current.wind_speed} MPH</p>
             <p>wind speed</p>
           </div>
         </div>
