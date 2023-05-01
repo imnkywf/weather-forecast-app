@@ -5,7 +5,7 @@ import './index.css'
 import nightBgc from '../../Images/Night-bgc.jpg'
 import dayBgc from '../../Images/Day-bgc.jpg'
 
-const key = 'f8af435890e6e5a851981bc80ccb4394'
+// const key = 'f8af435890e6e5a851981bc80ccb4394'
 
 const getgeocodingFromAPI = async (city) => {
   const geocodingUrl = `https://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=1&appid=${key}`
@@ -28,7 +28,8 @@ function Content(props) {
   useEffect(() => {
     getDataFromAPI(props.location).then(res => setData(res)).catch(err => console.log(err))
 
-    setBackgroundImage(dayBgc)
+
+    setBackgroundImage(nightBgc)
 
   }, [props.location])
 
@@ -37,13 +38,13 @@ function Content(props) {
       <div className="container">
         <div className="top">
           <div className="location">
-            <p>Cambridge</p>
+            <p>{data.city}</p>
             <div className="temp">
-              <h1>65°C</h1>
+              <h1>{data.main.temp}°C</h1>
             </div>
 
             <div className="description">
-              <p>Clouds</p>
+              <p>{data.weather}</p>
             </div>
           </div>
         </div>
