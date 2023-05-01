@@ -1,1 +1,3 @@
-export const sendLocation = (data) => ({ type: 'sendLocation', data })
+export const sendLocation = data => {
+  return { type: 'sendLocation', data }
+}
