@@ -1,70 +1,58 @@
-# Getting Started with Create React App
+# Weather Forecast App
+The Mobile Weather Forecast App is a feature-rich application developed using React and React Redux, incorporating the OpenWeather API. Its goal is to provide real-time weather information and forecasts to users. Designed specifically for mobile devices, this app offers a responsive and intuitive user interface, allowing users to conveniently access accurate weather data while on the go.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Techniques Used
+• React.js Framework.
+• React-Router.
+• React-Redux.
+• MUI Library.
+• Adaptive and Responsive Application Design.
+• Restful APIs with OpeanWeather.
 
-## Available Scripts
+## Installation
+To run the Mobile Weather Forecast App locally, follow these steps:
+### 1. Clone this repository:
+git clone git@github.com:imnkywf/weather-forecast-app.git
 
-In the project directory, you can run:
+### 2. Navigate to the directory:
+cd mobile-weather-forecast
 
-### `npm start`
+### 3. Install all the dependencies:
+npm install
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### 4. Go to OpenWeather and generate your own key:
+https://openweathermap.org/api
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### 5. Replace with your own key and start:
+npm start
 
-### `npm test`
+## Functionality
+### Accurate Weather Reports: 
+Users can retrieve detailed information about the weather, including temperature, wind speed, humidity, and more.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Real-time Updates: 
+The app continuously fetches data from the OpenWeather API, ensuring that the weather information is up-to-date.
 
-### `npm run build`
+### User-friendly Interface: 
+The application offers a user-friendly and intuitive interface, making it easy for users to see the details and retrieve the desired weather information.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Time-based Theme: 
+The app detects the current time and adjusts the background image to reflect the corresponding day or night theme.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Challenges
+To cope with the delayed activation process and limited request times of the OpenWeather API, it is necessary to store the retrieved data during the development stages of the Weather Forecast Application, ensuring efficient progress and reducing reliance on real-time API responses.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Preview
+![Alt text](https://github.com/imnkywf/weather-forecast-app/blob/main/Screen_Shots/Picture%202.png "image demo")
+Day Time
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+![Alt text](https://github.com/imnkywf/weather-forecast-app/blob/main/Screen_Shots/Picture%201.png "image demo")
+Night Time
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
