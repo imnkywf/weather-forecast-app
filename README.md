@@ -43,14 +43,14 @@ The app detects the current time and adjusts the background image to reflect the
 To cope with the delayed activation process and limited request times of the OpenWeather API, it is necessary to store the retrieved data during the development stages of the Weather Forecast Application, ensuring efficient progress and reducing reliance on real-time API responses.
 
 ### Preview
+Day Time
 ![Alt text](https://github.com/imnkywf/weather-forecast-app/blob/main/Screen_Shots/Picture%202.png "image demo")
 
-Day Time
-
-
-![Alt text](https://github.com/imnkywf/weather-forecast-app/blob/main/Screen_Shots/Picture%201.png "image demo")
 
 Night Time
+![Alt text](https://github.com/imnkywf/weather-forecast-app/blob/main/Screen_Shots/Picture%201.png "image demo")
+
+
 
 
 
