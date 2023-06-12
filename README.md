@@ -44,10 +44,12 @@ To cope with the delayed activation process and limited request times of the Ope
 
 ### Preview
 Day Time
+
 ![Alt text](https://github.com/imnkywf/weather-forecast-app/blob/main/Screen_Shots/Picture%202.png "image demo")
 
 
 Night Time
+
 ![Alt text](https://github.com/imnkywf/weather-forecast-app/blob/main/Screen_Shots/Picture%201.png "image demo")
 
 
