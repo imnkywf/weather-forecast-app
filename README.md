@@ -3,7 +3,6 @@ The Mobile Weather Forecast App is a feature-rich application developed using Re
 
 ## Techniques Used
 • React.js Framework.
-• React-Router.
 • React-Redux.
 • MUI Library.
 • Adaptive and Responsive Application Design.
@@ -15,7 +14,7 @@ To run the Mobile Weather Forecast App locally, follow these steps:
 git clone git@github.com:imnkywf/weather-forecast-app.git
 
 ### 2. Navigate to the directory:
-cd mobile-weather-forecast
+cd weather-forecast-app
 
 ### 3. Install all the dependencies:
 npm install
